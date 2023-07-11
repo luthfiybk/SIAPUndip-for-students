@@ -14,9 +14,9 @@ export default function LoginScreen({ navigation }) {
         const emailError = emailValidator(email.value)
         const passwordError = passwordValidator(password.value)
         if (emailError || passwordError) {
-        setEmail({ ...email, error: emailError })
-        setPassword({ ...password, error: passwordError })
-        return
+            setEmail({ ...email, error: emailError })
+            setPassword({ ...password, error: passwordError })
+            return
         }
         navigation.reset({
         index: 0,
@@ -26,9 +26,9 @@ export default function LoginScreen({ navigation }) {
 
     return (
         <Background>
-        <Header>Absensi</Header>
+        <Header>Login</Header>
         <TextInput
-            label="Email"
+            label="NRP"
             returnKeyType="next"
             value={email.value}
             onChangeText={(text) => setEmail({ value: text, error: '' })}
