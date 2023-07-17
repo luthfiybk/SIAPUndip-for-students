@@ -1,4 +1,4 @@
 export { default as Login } from "./auth/Login";
-export { default as DashboardAnggota } from "./Anggota/DashboardAnggota";
-export { default as History } from ".//Anggota/History";
-export {default as NavigatorAnggota} from "./Anggota/NavigatorAnggota";
+export { default as DashboardMhs } from "./Mahasiswa/DashboardMhs";
+export { default as History } from "./Mahasiswa/History";
+export {default as NavigatorMhs} from "./Mahasiswa/NavigatorMhs";
