@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { React, Text } from "react-native";
 import { TouchableOpacity, StyleSheet, View } from 'react-native';
 import { DashboardMhs,
-         History
+         Profile
          } from "..";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -15,7 +15,7 @@ const NavigatorMhs = () => {
             tabBarStyle:{
                 position:'absolute',
                 justifyContent: "center",
-                backgroundColor: '#162953',
+                backgroundColor: '#16295',
                 // marginBottom:'2%',
                 // marginTop:'10%',
                 // marginHorizontal:'2%',
@@ -24,7 +24,7 @@ const NavigatorMhs = () => {
                 // marginTop:10
                 // ...styles.shadow
             },
-            tabBarShowLabel:true,
+            tabBarShowLabel: false,
 
         }} >
             <Tab.Screen
@@ -34,21 +34,21 @@ const NavigatorMhs = () => {
                     <Icon
                       name={focused ? "home" : "home-outline"}
                       size={20}
-                      color={focused ? "#fff" : "grey"}
+                      color={focused ? "#000" : "grey"}
                     />
-                    {/* <Text
+                    <Text
                       style={{
-                        color: focused ? "#fff" : "grey",
+                        color: focused ? "#000" : "grey",
                         // fontFamily: "Roboto-Bold",
                         fontSize: 10,
                       }}
                     >
                       Dashboard
-                    </Text> */}
+                    </Text>
                   </View>
                 ),
               }}
-              name="Dashboard"
+              name="null"
               component={DashboardMhs}
             />
 
@@ -60,17 +60,17 @@ const NavigatorMhs = () => {
                     <Icon
                       name={focused ? "qr-code" : "qr-code-outline"}
                       size={20}
-                      color={focused ? "#fff" : "grey"}
+                      color={focused ? "#000" : "grey"}
                     />
-                    {/* <Text
+                    <Text
                       style={{
-                        color: focused ? "#fff" : "grey",
+                        color: focused ? "#000" : "grey",
                         // fontFamily: "Roboto-Bold",
                         fontSize: 10,
                       }}
                     >
-                      Dashboard
-                    </Text> */}
+                      Absen
+                    </Text>
                   </View>
                 ),
               }}
@@ -81,26 +81,26 @@ const NavigatorMhs = () => {
             <Tab.Screen
               options={{
                 tabBarIcon: ({ focused }) => (
-                  <View style={{ alignItems: "center" }}>
+                  <View style={{ alignItems: "center"}}>
                     <Icon
                       name={focused ? "person-circle" : "person-circle-outline"}
                       size={20}
-                      color={focused ? "#fff" : "grey"}
+                      color={focused ? "#000" : "grey"}
                     />
-                    {/* <Text
+                    <Text
                       style={{
-                        color: focused ? "#fff" : "grey",
+                        color: focused ? "#000" : "grey",
                         // fontFamily: "Roboto-Bold",
                         fontSize: 10,
                       }}
                     >
-                      Dashboard
-                    </Text> */}
+                      Profil
+                    </Text>
                   </View>
                 ),
               }}
               name="Profil"
-              component={History}
+              component={Profile}
             />
 
         {/* <Tab.Screen name="Absen" component={} /> */}
