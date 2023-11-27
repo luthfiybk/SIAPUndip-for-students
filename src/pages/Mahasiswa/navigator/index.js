@@ -3,7 +3,7 @@ import { React, Text } from "react-native";
 import { TouchableOpacity, StyleSheet, View } from 'react-native';
 import { DashboardMhs,
          Profile
-         } from "..";
+         } from "../..";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const Tab = createBottomTabNavigator();
@@ -43,7 +43,7 @@ const NavigatorMhs = () => {
                         fontSize: 10,
                       }}
                     >
-                      Dashboard
+                      Home
                     </Text>
                   </View>
                 ),
@@ -56,7 +56,7 @@ const NavigatorMhs = () => {
               options={{
 
                 tabBarIcon: ({ focused }) => (
-                  <View style={{ alignItems: "center" }}>
+                  <View style={{ alignItems: "center"}}>
                     <Icon
                       name={focused ? "qr-code" : "qr-code-outline"}
                       size={20}

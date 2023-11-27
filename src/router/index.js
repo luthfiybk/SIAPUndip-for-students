@@ -1,7 +1,7 @@
 import React from 'react'
 import { Login,
-         DashboardMhs,
-         NavigatorMhs } from '../pages'
+          NavigatorMhs, 
+          Absensi } from '../pages'
 import { createStackNavigator } from '@react-navigation/stack'
 import { SafeAreaView, View } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
@@ -18,9 +18,9 @@ const Router = () => {
       <View style={{ flex: 1, backgroundColor: '#162953' }}>
         <SafeAreaView style={{ flex: 0, backgroundColor: '#162953' }} />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          {/* <Stack.Screen name='Login' component={Login} /> */}
-          {/* <Stack.Screen name='DashboardAnggota' component={DashboardAnggota} /> */}
+          <Stack.Screen name='Login' component={Login} />
           <Stack.Screen name='NavigatorMhs' component={NavigatorMhs} />
+          <Stack.Screen name='Absensi' component={Absensi} />
         </Stack.Navigator>
       </View>
     </>
@@ -28,5 +28,3 @@ const Router = () => {
 };
 
 export default Router;
-
-// export default Router
